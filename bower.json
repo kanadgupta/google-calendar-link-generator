@@ -5,13 +5,12 @@
     "private": true,
     "homepage": "https://github.com/HopeUA/tools-calendar",
     "license": "MIT",
-
     "dependencies": {
         "angular": "1.2.x",
         "angular-animate": "1.2.x",
         "bootstrap": "3.x",
         "moment": "2.x",
-        "eonasdan-bootstrap-datetimepicker": "3.x",
-        "URIjs": "1.x",
+        "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+        "URIjs": "1.x"
     }
 }
