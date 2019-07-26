@@ -55,18 +55,40 @@
                 </div>
                 <h3>Date and Time</h3>
                 <div class="form-group">
-                    <label for="eventDateStart">Start:</label>
-                    <div class="input-group date" id="dateStartContainer" datetime ng-model="start">
-                        <input type="text" class="form-control" id="eventDateStart" name="start" readonly/>
+                    <label for="allDay">All Day Event?&nbsp;</label>
+                    <input type="checkbox" ng-model="allDay" id="allDay">
+                </div>
+                <div class="form-group" ng-if="!allDay">
+                    <label for="eventDateStart">Start Time:</label>
+                    <div class="input-group datetime" id="dateStartContainer" datetime ng-model="start.time">
+                        <input type="text" class="form-control" id="eventDateStart" name="start" />
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="eventDateEnd">End:</label>
-                    <div class="input-group date" id="dateEndContainer" datetime ng-model="end">
-                        <input type="text" class="form-control" id="eventDateEnd" name="end" readonly/>
+                <div class="form-group" ng-if="!allDay">
+                    <label for="eventDateEnd">End Time:</label>
+                    <div class="input-group datetime" id="dateEndContainer" datetime ng-model="end.time">
+                        <input type="text" class="form-control" id="eventDateEnd" name="end"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group" ng-if="allDay">
+                    <label for="eventDateStart">Start Date:</label>
+                    <div class="input-group date" id="dateStartContainer" datetime ng-model="start.date">
+                        <input type="text" class="form-control" id="eventDateStart" name="start" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group" ng-if="allDay">
+                    <label for="eventDateEnd">End Date:</label>
+                    <div class="input-group date" id="dateEndContainer" datetime ng-model="end.date">
+                        <input type="text" class="form-control" id="eventDateEnd" name="end"/>
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
