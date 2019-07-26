@@ -48,9 +48,9 @@
                 // restricts boundaries so start time cannot be after end time
                 // and end time cannot be before start time
                 if (attrs.id === 'dateStartContainer') {
-                    $('#dateEndContainer').data("DateTimePicker").minDate(e.date);
+                    $('#dateEndContainer').data("DateTimePicker").setMinDate(e.date);
                 } else {
-                    $('#dateStartContainer').data("DateTimePicker").maxDate(e.date);
+                    $('#dateStartContainer').data("DateTimePicker").setMaxDate(e.date);
                 }
 
                 // Google Calendar misleadingly formats all-day event
